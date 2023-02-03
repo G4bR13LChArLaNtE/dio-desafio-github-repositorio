@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author skydr
- *
- */
-module OrangeTechBackEnd {
-}
