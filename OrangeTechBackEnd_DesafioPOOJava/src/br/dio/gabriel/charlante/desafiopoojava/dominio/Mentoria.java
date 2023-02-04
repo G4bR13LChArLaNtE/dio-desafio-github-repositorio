@@ -7,40 +7,16 @@ import java.time.LocalDate;
  *
  *Classe que abstrai informaçoes sobre as mentorias do BootCamp.
  */
-public class Mentoria {
+public class Mentoria extends Conteudo {
 
 	
 	/***
-	 * @param titulo titulo da mentoria
-	 * @param descricao da mentoria
 	 * @param data data da mentoria
 	 */
-	
-	
-	private String titulo;
-	
-	private String descricao;
 	
 	private LocalDate data;
 
 	
-	
-	
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
 
 	public LocalDate getData() {
 		return data;
@@ -51,9 +27,6 @@ public class Mentoria {
 	}
 
 	
-	
-	
-	
 	public Mentoria() {
 		
 	}
@@ -61,8 +34,8 @@ public class Mentoria {
 	
 	public Mentoria(String titulo, String descricao, LocalDate data) {
 		super();
-		this.titulo = titulo;
-		this.descricao = descricao;
+		this.setTitulo(titulo);
+		this.setDescricao(descricao);
 		this.data = data;
 	}
 	
@@ -71,9 +44,14 @@ public class Mentoria {
 	@Override
 	public String toString() {
 		return "Mentoria (" +
-				"título: " + titulo + " | " +
-				"descrição: " + descricao + " | " +
+				"título: " + getTitulo() + " | " +
+				"descrição: " + getDescricao() + " | " +
 				"Data: " + data + ")";
+	}
+
+	@Override
+	public double calcularXP() {
+		return XP_PADRAO + 20.0;
 	}
 	
 	

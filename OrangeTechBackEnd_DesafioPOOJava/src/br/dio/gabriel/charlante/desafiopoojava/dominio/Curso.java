@@ -6,39 +6,16 @@ package br.dio.gabriel.charlante.desafiopoojava.dominio;
  * Classe que abstrai informaçoes sobre os cursos do BootCamp.
  *
  */
-public class Curso {
+public class Curso extends Conteudo {
 
 	
 	/***
-	 * @param titulo titulo do curso
-	 * @param descricao do curso
 	 * @param cargaHoraria carga horaria do curso
 	 */
 	
-	private String titulo;
-	
-	private String descricao;
 	
 	private Integer cargaHoraria;
 
-	
-	
-	
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
 
 	public Integer getCargaHoraria() {
 		return cargaHoraria;
@@ -55,17 +32,22 @@ public class Curso {
 
 	public Curso(String titulo, String descricao, Integer cargaHoraria) {
 		super();
-		this.titulo = titulo;
-		this.descricao = descricao;
+		this.setTitulo(titulo);
+		this.setDescricao(descricao);
 		this.cargaHoraria = cargaHoraria;
 	}
 	
 	@Override
 	public String toString() {
 		return "Curso (" +
-				"título: " + titulo + " | " +
-				"descrição: " + descricao + " | " +
+				"título: " + getTitulo() + " | " +
+				"descrição: " + getDescricao() + " | " +
 				"Carga horária: " + cargaHoraria + " horas"+ ")";
+	}
+
+	@Override
+	public double calcularXP() {
+		return XP_PADRAO * cargaHoraria;
 	}
 	
 	
