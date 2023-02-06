@@ -21,18 +21,17 @@ public class Main {
 		
 		
 		
-		  Curso curso2 = new Curso(); curso2.setTitulo("Curso js");
-		  curso2.setDescricao("Descrição js"); curso2.setCargaHoraria(12);
+		Curso curso2 = new Curso(); curso2.setTitulo("Curso js");
+		curso2.setDescricao("Descrição js"); curso2.setCargaHoraria(12);
 		  
-		  System.out.println(curso1);
+		System.out.println(curso1);
 		  
-		  System.out.println(curso2);
+		System.out.println(curso2);
 		  
 			
-			  Mentoria mentoria1 = new Mentoria("SpringBoot", "Aprendendo SpringBoot",
-			  LocalDate.now());
+		Mentoria mentoria1 = new Mentoria("SpringBoot", "Aprendendo SpringBoot",LocalDate.now());
 			  
-			  System.out.println(mentoria1);
+		System.out.println(mentoria1);
 			 
 		 
 		
